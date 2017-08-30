@@ -1,0 +1,18 @@
+{
+  "name": "weather-app",
+  "version": "1.0.0",
+  "description": "More from Udemy's Node JS class. Yay.",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "y"
+  },
+  "author": "Joel Gonzaga",
+  "license": "ISC",
+  "dependencies": {
+    "request": "^2.81.0"
+  }
+}
