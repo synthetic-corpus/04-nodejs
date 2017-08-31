@@ -18,7 +18,7 @@ const argv = yargs
 // Converts it something useful for google API.
 let rawAddress = argv.a;
 let encodedAddress = encodeURIComponent(rawAddress);
-let googleCoordinates = "http://maps.googleapis.com/maps/api/geocode/json?address="+encodedAddress;
+let googleCoordinates = `http://maps.googleapis.com/maps/api/geocode/json?address=${encodedAddress}`;
 
 request({
   url: googleCoordinates,
