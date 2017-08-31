@@ -1,4 +1,18 @@
 const request = require('request');
+const yargs = require('yargs');
+
+const argv = yargs
+  .options({
+    a: {
+      demand: true,
+      alias: 'address',
+      describe: 'Address to fetch weather for.',
+      string: true // will be parse as a string always.
+    }
+  })
+  .help()
+  .alias('help','h')
+  .argv;
 
 var googleCoordinates = "http://maps.googleapis.com/maps/api/geocode/json?address=303+west+colorado+blvd+monrovia+ca";
 
