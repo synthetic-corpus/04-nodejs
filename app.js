@@ -14,7 +14,11 @@ const argv = yargs
   .alias('help','h')
   .argv;
 
-var googleCoordinates = "http://maps.googleapis.com/maps/api/geocode/json?address=303+west+colorado+blvd+monrovia+ca";
+// Takes in a string with spaces from arguments.
+// Converts it something useful for google API.
+let rawAddress = argv.a;
+let encodedAddress = encodeURIComponent(rawAddress);
+let googleCoordinates = "http://maps.googleapis.com/maps/api/geocode/json?address="+encodedAddress;
 
 request({
   url: googleCoordinates,
