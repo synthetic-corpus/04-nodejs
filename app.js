@@ -26,7 +26,12 @@ geocode.geocodeAddress(argv.a, (errorMessage, results) => {
   else{
     console.log(results);
     weather.getTemp(results.lat,results.lng,(errorMessage, results) => {
-      //do Nothing right now
+      if (errorMessage){
+        console.log(errorMessage)
+      }
+      else{
+        console.log("The Tempature is ",results.temperature)
+      }
     })
   }
 });

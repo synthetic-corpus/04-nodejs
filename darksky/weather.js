@@ -9,7 +9,15 @@ var getTemp = (lat,lng, callback) =>{
     url: apiCall,
     json: true
   }, function(error, response, body){
-    console.log(body.currently.temperature);
+    if (error){
+      callback(`Could not reach the address: ${apiCall}`);
+    }
+    else if (body.error) {
+      callback(body.eroor);
+    }
+    else {
+      callback(undefined,body.currently);
+    }
   })
 }
 
