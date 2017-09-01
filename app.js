@@ -1,6 +1,7 @@
 
 const yargs = require('yargs');
 const geocode = require('./geocode/geocode');
+const weather = require('./darksky/weather')
 
 const argv = yargs
   .options({
@@ -24,5 +25,8 @@ geocode.geocodeAddress(argv.a, (errorMessage, results) => {
   }
   else{
     console.log(results);
+    weather.getTemp(results.lat,results.lng,(errorMessage, results) => {
+      //do Nothing right now
+    })
   }
 });
