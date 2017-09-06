@@ -13,6 +13,7 @@
   "author": "Joel Gonzaga",
   "license": "ISC",
   "dependencies": {
+    "axios": "^0.16.2",
     "request": "^2.81.0",
     "yargs": "^8.0.2"
   }
